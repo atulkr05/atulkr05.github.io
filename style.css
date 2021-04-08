@@ -1,0 +1,101 @@
+*{
+    display: block;
+    box-sizing: border-box;
+}
+.navbar{ 
+    background-color: rgb(214, 115, 79);
+    border-radius: 25px;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 10px auto;
+    padding: 3px;
+    border: 25px seagreen;
+}
+.navbar li a{
+    text-decoration: none;
+}
+.navbar li a:hover{
+    color:rgb(48, 63, 56);
+}
+.navbar li a:visited{
+    color: rgb(88, 29, 29);
+}
+.navbar input{
+    border: 2px rgb(83, 29, 29) solid;
+    border-radius: 5px;
+}
+.search{
+    float: right;
+    padding: 3px 25px;
+    margin: 10px auto;
+}
+
+h1,i{
+    text-align: center;
+    font-size: 70px;
+    color:darkslategray;
+    font-style:italic;
+}
+
+.container{
+    /* display: flex; */
+    background-color: rgb(160, 150, 150);
+    border: 3px solid #607D8B;
+    padding: 35px;
+    margin: 10px;
+    border-radius: 22px;
+    /* width: 500px; */
+}
+
+.aboutlist,li{
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+}
+
+h3{
+    font-size: 30px;
+    color:darkslategray;
+}
+
+img{
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    border: 3px solid #607D8B;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+.myself,h2{
+    text-align: center;
+    color:darkslategray;
+}
+
+#top{
+    text-align: right;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa:hover {
+    opacity: 0.9;
+}
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-github {
+    background: #000;
+    color: white;
+  }
