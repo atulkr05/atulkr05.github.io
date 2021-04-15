@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <!-- <header>
+        <img src="curajlogo.gif" alt="">
+        <h1>Central University of Rajasthan</h1>
+    </header> -->
+    <h2>CURAJ Application Form</h2>
+    <div class="container">
+        <form action="backend.php">
+            <!-- <label for="name">Name:</label> -->
+            <div>
+               Name: <input type="text"class="try"  name="myname" id="name" placeholder="Enter your name">
+            </div>
+            <div>
+                Father's Name: <input type="text"class="try" name="fathernamename" id="fathername" placeholder="Enter your Father's name">
+             </div>
+            <div>
+                Age: <input type="value"class="try" name="myage" placeholder="Enter your age">
+            </div>
+            <div>
+                Email id: <input type="email"class="try" name="myemail" placeholder="Enter your Email-id">
+            </div>
+            <div>
+                D.O.B.: <input type="date"class="try" name="mydate">
+            </div>
+            <div>
+                Mobile No.: <input type="number"class="try" name="mynumber" placeholder="Enter your Mobile number">
+            </div>
+            <!-- <label for="eligibility">Are you eligible?:</label> -->
+            <div>
+               Are you eligible? <input type="checkbox" name="myeligibility" id="eligibility">
+            </div>
+            <div>
+                Gender: <input type="radio" name="mygender">Male
+                 <input type="radio" name="mygender"> Female
+                 <input type="radio" name="mygender"> Others
+            </div>
+            <div>
+                Write about Yourself:<br> <textarea name="mytext" id="" cols="90" rows="10" placeholder="Describe Yourself(10-500 words)"></textarea>
+            </div>
+    
+            <div>
+                Subjects:<select name="Subjects">
+                    <option selected>Choose...</option>
+                    <option value="Ind">Computer Science</option>
+                    <option value="Swt">Statistics</option>
+                    <option value="Ind">Mathematics</option>
+                    <option value="Swt">Economics</option>
+                </select>
+            </div>
+    
+            <div>
+                <input type="submit" class="btn" value="Submit" name="mysubmission" onclick="alert('Do you want to submit')">
+                <input type="reset" class="btn" value="Reset" name="myreset">
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
