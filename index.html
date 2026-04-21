@@ -1,56 +1,155 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atul Kumar – Index</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Custom Styles -->
+  <title>Atul Kumar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand text-white fw-bold" href="index.html">Atul Kumar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <div class="orb-container">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="nav-wrapper">
+    <nav class="navbar">
+      <div class="hamburger" id="hamburger-menu"><i class="fas fa-bars"></i></div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="startup.html" class="nav-link">Startup</a>
+        <!-- <a href="assets/img/CV_Atul_Kumar.pdf" target="_blank" class="nav-link" style="color: var(--highlight);"><i class="fas fa-file-pdf"></i> CV</a> -->
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <div class="container text-center">
-      <img src="assets/img/atul.jpg" class="rounded-circle mb-4" alt="Atul Kumar" width="160" height="160">
-      <h1 class="display-4 text-white mb-2">Atul Kumar</h1>
-      <p class="lead text-light">Ph.D. Scholar in Data Science & Engineering at IISER Bhopal</p>
-    </div>
-  </header>
+  <div class="vanguard-container"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 150px;">
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center py-3">
-      <span class="text-muted">&copy; 2025 Atul Kumar</span>
+    <!-- Main Hero Flex Container (Responsive layout directly on homepage) -->
+    <div class="reveal"
+      style="width: 100%; max-width: 1200px; display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; justify-content: space-between; padding: 2rem 0 6rem; margin-bottom: 2rem;">
+
+      <!-- Text Info Section -->
+      <div style="flex: 1; min-width: 300px;">
+        <h1 class="vanguard-title"
+          style="font-size: 5rem; margin-bottom: 0.5rem; text-align: left; line-height: 1.1;">
+          Atul Kumar</h1>
+        <p class="vanguard-subtitle"
+          style="text-align: left; margin-bottom: 2rem; color: var(--text-muted); font-size: 1.3rem; font-weight: 500;">
+          Ph.D. Scholar at IISER Bhopal</p>
+
+        <p
+          style="color: var(--text-main); font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem; max-width: 550px;">
+          Actively conducting advanced research computing in <strong>Privacy-Preserving Deep Learning</strong> and <strong>Trustworthy AI</strong> systems. Director of <strong>GUARDMYPRIVACY Private Limited</strong>, bridging the gap between academic innovation and scalable industry defense through cutting-edge biometric security models.
+        </p>
+
+        <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+          <a href="research.html"
+            style="padding: 1.2rem 2.5rem; background: var(--text-main); color: var(--bg-color); border-radius: 40px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.3s, box-shadow 0.3s; display: inline-block; white-space: nowrap;"
+            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px rgba(255, 107, 53, 0.2)';" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            View Research Profile</a>
+          <a href="assets/img/CV_Atul_Kumar.pdf" target="_blank"
+            style="padding: 1.2rem 2.5rem; background: transparent; border: 2px solid var(--text-muted); color: var(--text-main); border-radius: 40px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.3s, border-color 0.3s; display: inline-block; white-space: nowrap;"
+            onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='var(--primary)';" 
+            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--text-muted)';">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- Professional Portrait Section -->
+      <div style="flex: 1; min-width: 300px; display:flex; justify-content: center; align-items: center;">
+        <div style="position: relative; width: 350px; height: 350px;">
+          <div
+            style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; border: 4px solid var(--glass-border); box-shadow: 0 30px 60px rgba(255, 107, 53, 0.15);">
+            <img src="assets/img/atul.jpg" alt="Atul Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Stacked Gallery Portal -->
+    <a href="achievements.html" class="tilt-card reveal"
+      style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; justify-content: space-between; text-decoration: none; padding: 4rem; margin-bottom: 4rem; width: 100%; max-width: 1100px; border-color: rgba(217, 70, 239, 0.4); background: linear-gradient(135deg, var(--glass), rgba(217,70,239,0.05));">
+      <div class="card-content" style="flex: 1; min-width: 300px;">
+        <h2 style="font-size: 2.8rem; margin-bottom: 1rem; color: #fff; line-height: 1.1;">Visual <span
+            style="color: var(--highlight);">Gallery.</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Explore a curated collection of
+          honors, poster presentations, and milestones captured during different events.</p>
+        <span
+          style="display: inline-block; margin-top: 1.5rem; color: var(--highlight); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i
+            class="fas fa-arrow-right"></i> Enter Gallery</span>
+      </div>
+      <!-- Stacked images container -->
+      <div class="card-content"
+        style="position: relative; width: 280px; height: 220px; display: flex; justify-content: center; align-items: center;">
+        <img src="assets/img/MP_young_Scientist.jpeg"
+          style="position: absolute; width: 180px; height: 180px; object-fit: cover; border-radius: 12px; border: 4px solid var(--bg-color); transform: rotate(-15deg); left: 0; top: 10px; z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.8); transition: 0.3s;"
+          onmouseover="this.style.zIndex='10'; this.style.transform='rotate(0deg) scale(1.1)';"
+          onmouseout="this.style.zIndex='1'; this.style.transform='rotate(-15deg) scale(1)';">
+        <img src="assets/img/DSE_2024.jpeg"
+          style="position: absolute; width: 180px; height: 180px; object-fit: cover; border-radius: 12px; border: 4px solid var(--bg-color); transform: rotate(5deg); left: 50px; top: -10px; z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.8); transition: 0.3s;"
+          onmouseover="this.style.zIndex='10'; this.style.transform='rotate(0deg) scale(1.1)';"
+          onmouseout="this.style.zIndex='2'; this.style.transform='rotate(5deg) scale(1)';">
+        <img src="assets/img/Atul_eng_day.JPG"
+          style="position: absolute; width: 180px; height: 180px; object-fit: cover; border-radius: 12px; border: 4px solid var(--bg-color); transform: rotate(20deg); left: 100px; top: 30px; z-index: 3; box-shadow: 0 10px 30px rgba(0,0,0,0.8); transition: 0.3s;"
+          onmouseover="this.style.zIndex='10'; this.style.transform='rotate(0deg) scale(1.1)';"
+          onmouseout="this.style.zIndex='3'; this.style.transform='rotate(20deg) scale(1)';">
+      </div>
+    </a>
+
+    <!-- Contact Grid -->
+    <div class="bento-grid reveal"
+      style="width:100%; max-width:1100px; grid-auto-rows: 150px; grid-template-columns: repeat(3, 1fr);">
+      <a href="mailto:atulk23@iiserb.ac.in" class="tilt-card bento-span-1"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; border-color: rgba(6, 182, 212, 0.4); background: linear-gradient(135deg, var(--glass), rgba(6,182,212,0.05));">
+        <div class="card-content" style="text-align: center;">
+          <i class="fas fa-envelope text-gradient" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h3 style="color:#fff; font-size: 1.1rem; margin-bottom: 0.3rem;">Academic Email</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem;">atulk23@iiserb.ac.in</p>
+        </div>
+      </a>
+
+      <div class="tilt-card bento-span-1"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; border-color: rgba(99, 102, 241, 0.4); background: linear-gradient(135deg, var(--glass), rgba(99,102,241,0.05));">
+        <div class="card-content" style="text-align: center;">
+          <i class="fas fa-map-marker-alt text-gradient" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h3 style="color:#fff; font-size: 1.1rem; margin-bottom: 0.3rem;">Location</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem;">IISER Bhopal, India</p>
+        </div>
+      </div>
+
+      <a href="https://linkedin.com/in/atul-kumar-0348901a1" target="_blank" class="tilt-card bento-span-1"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; border-color: rgba(139, 92, 246, 0.4); background: linear-gradient(135deg, var(--glass), rgba(139,92,246,0.05));">
+        <div class="card-content" style="text-align: center;">
+          <i class="fab fa-linkedin text-gradient" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h3 style="color:#fff; font-size: 1.1rem; margin-bottom: 0.3rem;">LinkedIn</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem;">Connect Professional</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <footer
+    style="text-align:center; padding: 4rem 0 2rem; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--glass-border); margin-top: 5rem;">
+    <p>&copy; 2026 Atul Kumar. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom Scripts -->
   <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
