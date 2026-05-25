@@ -34,84 +34,147 @@
 
   <div class="vanguard-container" style="padding-top: 150px;">
 
-    <!-- Massive Standalone Banner -->
-    <div class="tilt-card reveal"
-      style="width: 100%; text-align: center; padding: 6rem 3rem; background: linear-gradient(to bottom, var(--glass), rgba(99, 102, 241, 0.1)); border-color: rgba(99, 102, 241, 0.3); position: relative; overflow: hidden; margin-bottom: 4rem;">
+    <div class="editorial-flow" style="display: flex; flex-direction: column; gap: 10rem; padding: 2rem 0 6rem 0;">
 
-      <!-- Subtle background image for the startup -->
-      <div style="position: absolute; inset: 0; z-index: 0; opacity: 0.15; filter: blur(5px);">
-        <img src="assets/img/AIC_Seed.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+      <!-- Hero Section -->
+      <style>
+        .startup-hero {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3rem;
+          max-width: 1000px;
+          margin: 0 auto;
+          text-align: left;
+          padding: 0 1rem;
+        }
+
+        .startup-hero-title {
+          font-size: clamp(2rem, 8vw, 4rem);
+          margin-bottom: 0.5rem;
+          color: var(--text-main);
+          font-weight: 900;
+          letter-spacing: 2px;
+          line-height: 1.1;
+        }
+
+        .startup-hero-subtitle {
+          font-size: clamp(1rem, 4vw, 1.5rem);
+          color: var(--text-muted);
+          font-weight: 500;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+          .startup-hero {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+          }
+        }
+      </style>
+      <div class="reveal startup-hero">
+        <img src="assets/img/Logo.png" alt="GuardMyPrivacy Logo" style="height: 130px; object-fit: contain;">
+        <div>
+          <h1 class="startup-hero-title"><span class="text-gradient">GUARDMYPRIVACY</span></h1>
+          <h2 class="startup-hero-subtitle">Private Limited</h2>
+        </div>
       </div>
 
-      <div class="card-content" style="position: relative; z-index: 10; max-width: 800px; margin: 0 auto;">
+      <!-- Vision Section -->
+      <div class="reveal"
+        style="position: relative; max-width: 1000px; margin: 0 auto; padding: 5rem 3rem; text-align: center; background: linear-gradient(180deg, rgba(var(--primary-rgb), 0.04), transparent); border-radius: 30px; border: 1px solid rgba(var(--primary-rgb), 0.1);">
+        <i class="fas fa-shield-alt"
+          style="font-size: 3rem; color: var(--primary); margin-bottom: 2rem; opacity: 0.8;"></i>
+        <h3
+          style="font-size: 1rem; color: var(--primary); text-transform: uppercase; letter-spacing: 4px; font-weight: 900; margin-bottom: 2rem;">
+          Our Vision</h3>
+        <p
+          style="font-size: 2.2rem; color: var(--text-main); line-height: 1.4; font-weight: 700; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          To eliminate unauthorized biometric data usage and provide <span style="color: var(--primary);">robust
+            adversarial defenses</span> for AI systems against emerging digital threats.
+        </p>
+        <div style="width: 60px; height: 3px; background: var(--accent); margin: 0 auto 2.5rem;"></div>
+        <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; max-width: 700px; margin: 0 auto;">
+          Bridging the gap between rigorous academic innovation and scalable industry defense. A revolutionary startup
+          stemming directly from cutting-edge PhD research at IISER Bhopal, dedicated to safeguarding personal biometric
+          data in an AI-driven world.
+        </p>
+      </div>
+
+      <!-- Leadership Section (Floating Profile Cards) -->
+      <div class="reveal" style="margin-top: 2rem;">
+        <h3 style="font-size: 2.5rem; color: var(--text-main); text-align: center; margin-bottom: 4rem;">Leadership</h3>
 
         <div
-          style="display:inline-block; padding: 0.8rem 2rem; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); border-radius: 40px; margin-bottom: 2rem;">
-          <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;"><i
-              class="fas fa-fingerprint"></i> Deep-Tech Venture</span>
-        </div>
-
-        <h1 class="vanguard-title" style="font-size: 5.5rem; margin-bottom: 1rem; line-height: 1.1;">GUARDMY<span
-            class="text-gradient" style="font-size: 6rem;">PRIVACY</span></h1>
-        <h2
-          style="font-size: 2rem; color: #fff; font-weight: 400; letter-spacing: 3px; margin-bottom: 2rem; opacity: 0.9;">
-          Private Limited</h2>
-
-        <p style="color: var(--text-main); font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;">
-          Bridging the gap between academic innovation and scalable industry defense.
-          A revolutionary startup stemming directly from cutting-edge PhD research at IISER Bhopal, dedicated to
-          safeguarding personal biometric data in an AI-driven world.
-        </p>
-
-      </div>
-    </div>
-
-    <!-- Granular Expansion Panels -->
-    <div class="bento-grid reveal" style="grid-auto-rows: auto;">
-
-      <!-- Vision Panel -->
-      <div class="tilt-card bento-span-2 reveal" style="padding: 3rem;">
-        <i class="fas fa-bullseye text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-        <h3 style="color:#fff; font-size: 1.8rem; margin-bottom: 1rem;">The Vision</h3>
-        <p style="color:var(--text-muted); font-size:1.1rem; line-height:1.6;">
-          To eliminate unauthorized biometric data usage and provide robust adversarial defenses for AI systems against
-          emerging digital threats, ensuring data sovereignty for individuals globally.
-        </p>
-      </div>
-
-      <!-- Team Panel -->
-      <div class="tilt-card bento-span-2 reveal" style="padding: 3rem;">
-        <i class="fas fa-users text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-        <h3 style="color:#fff; font-size: 1.8rem; margin-bottom: 1rem;">Founding Team</h3>
-        <div style="margin-top: 1rem;">
-          <p style="color:var(--text-main); font-size:1.2rem; margin-bottom: 0.5rem;"><strong>Mr. Atul Kumar</strong>
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
+          <!-- Profile 1 -->
+          <div
+            style="background: var(--bg-color); border: 1px solid var(--glass-border); border-radius: 24px; padding: 3rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.04); transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div
+              style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid rgba(var(--primary-rgb), 0.1);">
+              <img src="assets/img/atul.jpg"
+                onerror="this.src='https://via.placeholder.com/150/e4ebf5/1f2937?text=Atul'" alt="Atul Kumar"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="font-size: 1.8rem; color: var(--text-main); font-weight: 700; margin-bottom: 0.5rem;">Mr. Atul
+              Kumar</h4>
             <span
-              style="color:var(--primary); font-size: 0.9rem; margin-left: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Director</span>
-          </p>
-          <p style="color:var(--text-main); font-size:1.2rem;"><strong>Dr. Akshay Agarwal</strong> <span
-              style="color:var(--text-muted); font-size: 0.9rem; margin-left: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Director</span>
-          </p>
+              style="font-size: 1.1rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Director</span>
+          </div>
+
+          <!-- Profile 2 -->
+          <div
+            style="background: var(--bg-color); border: 1px solid var(--glass-border); border-radius: 24px; padding: 3rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.04); transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div
+              style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid rgba(var(--accent-rgb), 0.1);">
+              <img src="assets/img/akshay.jpeg"
+                onerror="this.src='https://via.placeholder.com/150/e4ebf5/1f2937?text=Akshay'" alt="Dr. Akshay Agarwal"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="font-size: 1.8rem; color: var(--text-main); font-weight: 700; margin-bottom: 0.5rem;">Dr. Akshay
+              Agarwal</h4>
+            <span
+              style="font-size: 1.1rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Director</span>
+          </div>
         </div>
       </div>
 
-      <!-- Grants / Funding Funding Panel -->
-      <div class="tilt-card bento-span-2 reveal"
-        style="padding: 3rem; border-color: rgba(6, 182, 212, 0.4); background: linear-gradient(135deg, var(--glass), rgba(6,182,212,0.05));">
-        <i class="fas fa-seedling" style="color: var(--accent); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-        <h3 style="color:#fff; font-size: 1.6rem; margin-bottom: 0.5rem;">AIC SEED Plan-E (Cohort-1)</h3>
-        <p style="color:var(--text-main); font-size:1.1rem; margin-bottom: 1rem;">Incubated and Supported by IISER Pune
-          (2025).</p>
-        <p style="color:var(--text-muted); font-size:0.95rem;">Key Inventors: Mr. Atul Kumar, Dr. Akshay Agarwal</p>
-      </div>
+      <!-- Grants Section (Asymmetrical Staggered Blocks) -->
+      <div class="reveal" style="margin-top: 4rem;">
+        <h3 style="font-size: 2.5rem; color: var(--text-main); text-align: center; margin-bottom: 6rem;">Incubation &
+          Grants</h3>
 
-      <div class="tilt-card bento-span-2 reveal"
-        style="padding: 3rem; border-color: rgba(139, 92, 246, 0.4); background: linear-gradient(135deg, var(--glass), rgba(139,92,246,0.05));">
-        <i class="fas fa-lightbulb" style="color: var(--highlight); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-        <h3 style="color:#fff; font-size: 1.6rem; margin-bottom: 0.5rem;">Student Innovation Grant (SIG)</h3>
-        <p style="color:var(--text-main); font-size:1.1rem; margin-bottom: 1rem;">Granted by IICE, IISER Bhopal (2025).
-        </p>
-        <p style="color:var(--text-muted); font-size:0.95rem;">Key Contributors: Mr. Atul Kumar, Dr. Akshay Agarwal, Ms.
-          S. Aarthi</p>
+        <div style="display: flex; flex-direction: column; gap: 6rem; max-width: 1000px; margin: 0 auto;">
+          <!-- Grant 1 (Aligned Left) -->
+          <div
+            style="width: 80%; background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), transparent); border-left: 4px solid var(--accent); padding: 3rem 4rem; border-radius: 0 24px 24px 0;">
+            <h4
+              style="font-size: 2.2rem; color: var(--text-main); margin-bottom: 1rem; line-height: 1.2; font-weight: 800;">
+              AIC SEED Plan-E <span
+                style="font-size: 1.5rem; color: var(--text-muted); font-weight: 400;">(Cohort-1)</span></h4>
+            <p style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 1rem;">Incubated and Supported by IISER
+              Pune (2025).</p>
+            <p style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Key
+              Inventors: Mr. Atul Kumar, Dr. Akshay Agarwal</p>
+          </div>
+
+          <!-- Grant 2 (Aligned Right) -->
+          <div
+            style="width: 80%; align-self: flex-end; background: linear-gradient(225deg, rgba(var(--highlight-rgb), 0.05), transparent); border-right: 4px solid var(--highlight); padding: 3rem 4rem; border-radius: 24px 0 0 24px; text-align: right;">
+            <h4
+              style="font-size: 2.2rem; color: var(--text-main); margin-bottom: 1rem; line-height: 1.2; font-weight: 800;">
+              Student Innovation Grant <span
+                style="font-size: 1.5rem; color: var(--text-muted); font-weight: 400;">(SIG)</span></h4>
+            <p style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 1rem;">Granted by IICE, IISER Bhopal
+              (2025).</p>
+            <p style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Key
+              Contributors: Mr. Atul Kumar, Dr. Akshay Agarwal, Ms. S. Aarthi</p>
+          </div>
+        </div>
       </div>
 
     </div>
