@@ -1,23 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
   /* Modern Professional Corporate Theme */
   --bg-color: linear-gradient(135deg, #F5F7FA 0%, #E4EBF5 100%); /* Elegant cool blue-gray gradient */
   --text-main: #1F2937; /* Very dark slate for crisp readability */
   --text-muted: #64748B; /* Slate gray */
-  
+
   --primary: #2563EB; /* Vibrant Professional Blue */
   --primary-rgb: 37, 99, 235;
-  
+
   --accent: #3B82F6; /* Brighter Blue Accent */
   --accent-rgb: 59, 130, 246;
-  
+
   --highlight: #0F172A; /* Deep Navy (almost black) */
   --highlight-rgb: 15, 23, 42;
+
+  /* Signature warm accent — used sparingly for scan/marker motifs tied to the biometric-privacy research theme */
+  --signature: #F0A020;
+  --signature-rgb: 240, 160, 32;
 
   --glass: rgba(255, 255, 255, 0.85); /* Premium frosted glass */
   --glass-border: rgba(255, 255, 255, 0.8); /* Clean white border */
   --glass-hover: rgba(255, 255, 255, 1);
+
+  --font-display: 'Fraunces', 'Outfit', serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+::selection {
+  background: rgba(var(--primary-rgb), 0.2);
+  color: var(--highlight);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--primary-rgb), 0.25);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--primary-rgb), 0.45);
 }
 
 /* Bento Box Aesthetic Classes */
@@ -54,11 +80,14 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: var(--bg-color);
+  background:
+    radial-gradient(circle, rgba(var(--highlight-rgb), 0.06) 1px, transparent 1.2px) 0 0 / 26px 26px,
+    var(--bg-color);
   background-attachment: fixed;
   color: var(--text-main);
   overflow-x: hidden;
   min-height: 100vh;
+  position: relative;
 }
 
 /* ---------------- CUSTOM CURSOR ---------------- */
@@ -113,7 +142,12 @@ body:hover .cursor-outline {
 }
 
 .orb {
-  display: none; /* Removed for a decent professional look */
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.22;
+  animation: drift 22s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .orb-1 {
@@ -130,16 +164,19 @@ body:hover .cursor-outline {
   background: var(--accent);
   bottom: -100px;
   left: -100px;
-  animation-delay: -5s;
+  animation-delay: -7s;
+  animation-duration: 26s;
 }
 
 .orb-3 {
-  width: 400px;
-  height: 400px;
-  background: var(--highlight);
-  top: 50%;
-  left: 30%;
-  animation-delay: -10s;
+  width: 420px;
+  height: 420px;
+  background: var(--signature);
+  top: 45%;
+  left: 35%;
+  opacity: 0.13;
+  animation-delay: -13s;
+  animation-duration: 30s;
 }
 
 @keyframes drift {
@@ -148,7 +185,14 @@ body:hover .cursor-outline {
   }
 
   100% {
-    transform: translate(150px, 150px) scale(1.3);
+    transform: translate(120px, 100px) scale(1.25);
+  }
+}
+
+@media (max-width: 900px) {
+  .orb {
+    opacity: 0.14;
+    filter: blur(80px);
   }
 }
 
@@ -171,12 +215,35 @@ body:hover .cursor-outline {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid var(--glass-border);
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.6rem;
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   box-shadow: 0 10px 40px rgba(var(--primary-rgb), 0.15);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary), var(--highlight));
+  color: #fff !important;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(var(--primary-rgb), 0.35);
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: rotate(-8deg) scale(1.08);
 }
 
 .hamburger {
@@ -188,16 +255,17 @@ body:hover .cursor-outline {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2.2rem;
   align-items: center;
 }
 
 .nav-link {
   color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
@@ -234,18 +302,33 @@ body:hover .cursor-outline {
 }
 
 .vanguard-title {
+  font-family: var(--font-display);
   font-size: 3.5rem;
   letter-spacing: -1px;
-  font-weight: 900;
+  font-weight: 700;
+  line-height: 1.05;
   background: linear-gradient(135deg, var(--text-main), var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.page-header .vanguard-subtitle::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--signature);
+  margin-right: 0.7rem;
+  transform: translateY(-2px) rotate(45deg);
+  box-shadow: 0 0 8px rgba(var(--signature-rgb), 0.6);
+}
+
 .vanguard-subtitle {
+  font-family: var(--font-mono);
   color: var(--accent);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-top: 1rem;
@@ -269,6 +352,25 @@ a {
   transition: box-shadow 0.3s, border-color 0.3s;
   position: relative;
   overflow: hidden;
+}
+
+.tilt-card::after {
+  /* Signature top accent bar */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--signature));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 1;
+}
+
+.tilt-card:hover::after {
+  transform: scaleX(1);
 }
 
 .tilt-card::before {
@@ -419,6 +521,14 @@ a {
   }
   .hero-buttons {
     justify-content: center;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    white-space: normal !important;
+    text-align: center;
+    flex: 1 1 auto;
+    min-width: 0;
   }
   
   .hero-portrait {
@@ -444,6 +554,7 @@ a {
 .text-gradient {
   background: linear-gradient(to right, var(--accent), var(--highlight));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -461,13 +572,37 @@ a {
   border-radius: 30px;
   background: rgba(var(--primary-rgb), 0.08);
   border: 1px solid var(--glass-border);
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   color: var(--text-main);
   transition: 0.3s;
 }
 
 .tag-chip:hover {
   background: var(--primary);
+  color: #fff;
   transform: translateY(-3px);
   border-color: transparent;
+}
+
+/* ---------------- SIGNATURE MOTIFS ---------------- */
+
+/* Editorial index numbers on publication rows */
+body { counter-reset: pubs; }
+
+.magazine-row {
+  counter-increment: pubs;
+  position: relative;
+}
+
+.magazine-row::before {
+  content: "0" counter(pubs);
+  position: absolute;
+  top: 1.6rem;
+  right: 2.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: rgba(var(--primary-rgb), 0.3);
 }
