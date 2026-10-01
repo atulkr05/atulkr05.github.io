@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faceprint Atlas | Atul Kumar</title>
+  <meta name="description" content="Faceprint Atlas: a filterable map of facial privacy protection research from 1999 to 2026. Over 200 papers across eleven families, each with venue, datasets, models, approach, findings, limitations and code links.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faceprint Atlas">
+  <meta property="og:description" content="A filterable map of facial privacy protection research, 1999 to 2026: de-identification, adversarial cloaks, unlearnable images, template protection, differential privacy, machine unlearning and the attacks that tested them.">
+  <meta property="og:url" content="https://atulkr05.github.io/atlas.html">
+  <link rel="canonical" href="https://atulkr05.github.io/atlas.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/css/atlas.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div class="orb-container">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="nav-wrapper">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" aria-label="Atul Kumar — Home">AK</a>
+      <div class="hamburger" id="hamburger-menu"><i class="fas fa-bars"></i></div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="atlas.html" class="nav-link">Atlas</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="startup.html" class="nav-link">Startup</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="vanguard-container atlas" id="atlas">
+
+    <header class="page-header reveal">
+      <h1 class="vanguard-title at-title">Faceprint <span class="text-gradient">Atlas</span></h1>
+      <p class="vanguard-subtitle">Facial privacy protection research · 1999 to 2026</p>
+      <p class="at-lede">Every way researchers have tried to protect a face, in one catalogue. Blur and pixelation, differential privacy, generative de-identification, adversarial cloaks and makeup, unlearnable images, template protection and encrypted matching, soft-biometric privacy, training-data privacy, machine unlearning, and the attacks that broke many of them. Each entry lists venue, datasets, models, approach, findings, limitations and code.</p>
+    </header>
+
+    <nav class="at-index" aria-label="Atlas sections">
+      <a href="#overview">Overview</a>
+      <a href="#years">Years</a>
+      <a href="#families">Families</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#library">Library</a>
+      <a href="#duels">Attacks vs defenses</a>
+      <a href="#paths">Reading paths</a>
+      <a href="#open">Open problems</a>
+      <a class="at-index-dl" href="assets/data/faceprint-atlas.xlsx" download><i class="fas fa-file-excel" aria-hidden="true"></i> Excel workbook</a>
+    </nav>
+
+    <noscript>
+      <p class="at-noscript">This atlas needs JavaScript to draw the map and filter the papers. The full dataset is available as an <a href="assets/data/faceprint-atlas.xlsx">Excel workbook</a>.</p>
+    </noscript>
+
+    <section class="at-sky" id="overview" aria-labelledby="sky-title">
+      <div class="at-sky-top">
+        <div class="at-sky-copy">
+          <p class="at-eyebrow at-eyebrow-dark">Overview</p>
+          <h2 id="sky-title">Every paper in one view.</h2>
+          <p>Each dot is an entry, placed by year and family. Amber arcs join a defense to the paper that tested it. Hover a dot to read its title and click to open its record.</p>
+          <div class="at-sky-cta">
+            <a class="at-btn at-btn-primary" href="#library">Browse the library</a>
+            <a class="at-btn at-btn-ghost" href="assets/data/faceprint-atlas.xlsx" download><i class="fas fa-download" aria-hidden="true"></i> Download Excel</a>
+          </div>
+        </div>
+        <div class="at-stats" id="stats"></div>
+      </div>
+      <div class="at-sky-canvas">
+        <canvas id="sky" aria-label="Every entry as a dot, by year left to right and family top to bottom, with arcs joining defenses to the papers that tested them"></canvas>
+        <div class="at-sky-tip" id="skyTip" role="status"></div>
+      </div>
+      <div class="at-sky-legend" id="skyLegend"></div>
+    </section>
+
+    <section class="at-section" id="years" aria-labelledby="years-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Browse by year</p>
+        <h2 id="years-title">Where the work happened.</h2>
+        <p>Everything from the earliest fuzzy commitment scheme onward, with the deepest coverage from 2018, the year deep face recognition met the GDPR. Pick a year to filter the library.</p>
+      </div>
+      <div class="at-years" id="yearGrid"></div>
+    </section>
+
+    <section class="at-section" id="families" aria-labelledby="families-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Eleven families</p>
+        <h2 id="families-title">Three places to intervene, and the work that cuts across.</h2>
+        <p>Protection can act on the picture, on the numbers derived from it, or in the system that trains and deploys recognisers. Each card shows how many entries a family has and how they spread over time. Pick one to filter the library.</p>
+      </div>
+      <div class="at-layers" id="tax"></div>
+    </section>
+
+    <section class="at-section" id="timeline" aria-labelledby="timeline-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Timeline</p>
+        <h2 id="timeline-title">From fuzzy commitments to diffusion cloaks.</h2>
+        <p>Entries by year, coloured by eight groups that fold the eleven families so the colours stay distinguishable. Adversarial, unlearnable and generative work is almost entirely post-2018.</p>
+      </div>
+      <div class="at-panel at-viz" id="tlViz">
+        <div class="at-viz-head">
+          <div>
+            <p class="at-viz-title">Atlas entries by year and group</p>
+            <p class="at-viz-sub">Counts reflect this catalogue, not the whole literature. Select a segment to filter the library.</p>
+          </div>
+          <div class="at-toggle" role="group" aria-label="View as">
+            <button type="button" aria-pressed="true" data-view="chart">Chart</button>
+            <button type="button" aria-pressed="false" data-view="table">Table</button>
+          </div>
+        </div>
+        <div class="at-legend" id="tlLegend"></div>
+        <div class="at-plot" data-plot></div>
+        <div class="at-tip" data-tip></div>
+      </div>
+    </section>
+
+    <section class="at-section" id="library" aria-labelledby="library-title">
+      <div class="at-head">
+        <p class="at-eyebrow">The library</p>
+        <h2 id="library-title">Every entry, filterable.</h2>
+        <p>Search titles, authors, datasets, models, methods and findings. Combine families, restrict years, keep only work with public code. Open an entry for its full record, including the GitHub repository where one exists.</p>
+      </div>
+      <div class="at-panel at-filters">
+        <div class="at-frow">
+          <input type="search" id="q" placeholder="Search title, author, dataset, model, method, finding, venue" aria-label="Search entries">
+          <label>Sort
+            <select id="sort">
+              <option value="ynew">Newest first</option>
+              <option value="yold">Oldest first</option>
+              <option value="title">Title A to Z</option>
+              <option value="family">Family</option>
+            </select>
+          </label>
+        </div>
+        <div class="at-chips" id="famChips" role="group" aria-label="Families"></div>
+        <div class="at-frow">
+          <label>Years <input type="number" id="y0" min="1999" max="2026" value="1999" aria-label="From year"> to <input type="number" id="y1" min="1999" max="2026" value="2026" aria-label="To year"></label>
+          <label>Venue type
+            <select id="vt">
+              <option value="">Any</option>
+              <option>Vision</option>
+              <option>Security</option>
+              <option>ML</option>
+              <option>Biometrics</option>
+              <option>Journal</option>
+              <option>Preprint</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="at-check"><input type="checkbox" id="codeOnly"> Public code only</label>
+          <button class="at-link" id="reset" type="button">Reset filters</button>
+        </div>
+        <div class="at-yearchips" id="yearChips" role="group" aria-label="Quick year filter"></div>
+      </div>
+      <div class="at-results">
+        <span id="count" role="status"></span>
+        <div class="at-tools">
+          <button class="at-btn at-btn-outline" id="dlCsv" type="button"><i class="fas fa-file-csv" aria-hidden="true"></i> Download CSV of these</button>
+          <button class="at-btn at-btn-outline" id="copyRefs" type="button"><i class="far fa-copy" aria-hidden="true"></i> Copy references</button>
+          <button class="at-btn at-btn-outline" id="expandAll" type="button">Expand all</button>
+        </div>
+      </div>
+      <div class="at-cards" id="cards"></div>
+    </section>
+
+    <section class="at-section" id="duels" aria-labelledby="duels-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Attacks versus defenses</p>
+        <h2 id="duels-title">What broke what.</h2>
+        <p>The most useful reading of this literature is as pairs. A defense is proposed; a later paper shows its limits. The same story repeats from blur to cloaks to anti-DreamBooth.</p>
+      </div>
+      <div class="at-duels" id="duelList"></div>
+    </section>
+
+    <section class="at-section" id="paths" aria-labelledby="paths-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Reading paths</p>
+        <h2 id="paths-title">Where to start, depending on who you are.</h2>
+      </div>
+      <div class="at-paths" id="pathList"></div>
+    </section>
+
+    <section class="at-section" id="open" aria-labelledby="open-title">
+      <div class="at-head">
+        <p class="at-eyebrow">Open problems</p>
+        <h2 id="open-title">What the literature has not solved.</h2>
+      </div>
+      <div class="at-problems" id="problems"></div>
+    </section>
+
+    <section class="at-panel at-about" aria-labelledby="about-title">
+      <h2 id="about-title">About this atlas</h2>
+      <p>Faceprint Atlas is a curated catalogue, not a systematic review. Inclusion favours work that introduced a technique, broke one, or shaped how the field evaluates itself. Venues and years were checked against arXiv metadata and proceedings; preprints may since have been published. Findings are summaries, so read the paper before citing a number. Code links point only to repositories that could be confirmed.</p>
+      <p>The same data is available as an <a href="assets/data/faceprint-atlas.xlsx" download>Excel workbook</a> with one tab per year and per family, and as a CSV of any filtered view from the library. <span id="updated"></span></p>
+    </section>
+
+  </main>
+
+  <footer class="at-footer">
+    <p>&copy; 2026 Atul Kumar. All rights reserved.</p>
+  </footer>
+
+  <div class="at-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/data/atlas-data.js"></script>
+  <script src="assets/js/atlas.js"></script>
+</body>
+
+</html>

@@ -289,6 +289,13 @@ body:hover .cursor-outline {
   box-shadow: 0 0 10px var(--accent);
 }
 
+/* Six nav links: tighten spacing on tablets so the pill fits between the 600px and 900px breakpoints */
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
+
 /* ---------------- SHARED LAYOUT ---------------- */
 .vanguard-container {
   max-width: 1300px;
